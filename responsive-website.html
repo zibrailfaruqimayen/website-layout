@@ -6,8 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        body{
+            max-width: 1200px;
+            margin: 0 auto;
+
+            border: 1px solid plum;
+        }
         h1{
-            font-size: 100px;
+            font-size: 10vw;
+        }
+        .tiger img{
+            width: 100%;
+
+        }
+        .container-tow{
+            display: flex;
+        }
+        .container-tow .split{
+            width: 50%;
+        }
+        /* make image responsive inside */
+        .split img{
+            width: 100%;
+        }
+        @media screen and (max-width: 576px) {
+            .container-tow{
+                flex-direction: column-reverse;
+            }
+            .container-tow .split{
+            width: 100%;
+        }
         }
     </style>
 </head>
@@ -15,9 +43,29 @@
     <section>
         <h1>My Responsive Website</h1>
     </section>
+    <section class="tiger">
+        <h3>Tiger</h3>
+        <img src="/images/tiger.jpeg" alt="">
+    </section>
+    <section>
+        <h2>Tow Parts</h2>
+        <div class="container-tow">
+            <div class="split">
+                <img src="/images/food.jpeg" alt="">
+            </div>
+            <div class="split">
+                <img src="images/tiger.jpeg" alt="">
+            </div>
+        </div>
+    </section>
     <!-- 
         1. viewport mata tag
         2. CSS Relative unit
+        3. Responsive Image (Fluid Image)
+        4. body max-width and margin auto
+        5. Responsive Split screen using flex (2 column section)
+        6. Grid responsive (multi column)
+        7. Responsive menu (bootstrap responsive)
      -->
 </body>
 </html>
